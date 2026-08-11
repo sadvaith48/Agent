@@ -4,7 +4,7 @@ from flask import Flask, abort, jsonify, render_template, request
 app = Flask(__name__)
 
 def get_vid(q):
-    try:
+    try: 
         enc = urllib.parse.quote(q)
         url = f"https://www.youtube.com/results?search_query={enc}"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
